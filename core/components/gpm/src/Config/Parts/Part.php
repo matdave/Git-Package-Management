@@ -32,7 +32,7 @@ abstract class Part
      * @param array $data
      * @param Config|null $config
      */
-    public function __construct(array $data, Config $config = null)
+    public function __construct(array $data, ?Config $config)
     {
         if ($config) {
             $this->setConfig($config);

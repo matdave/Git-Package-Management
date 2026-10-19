@@ -37,7 +37,7 @@ class PropertySet extends Part
         ]
     ];
 
-    protected function prepareObject(int $category = null, bool $update = false, array $previousProperties = null)
+    protected function prepareObject(int $category = null, bool $update = false, ?array $previousProperties)
     {
         /** @var \MODX\Revolution\modPropertySet $obj */
         $obj = null;
@@ -97,7 +97,7 @@ class PropertySet extends Part
         }
     }
 
-    public function getObject(int $category, array $previousProperties = null): modPropertySet
+    public function getObject(int $category, ?array $previousProperties): modPropertySet
     {
         return $this->prepareObject($category, true, $previousProperties);
     }

@@ -17,7 +17,7 @@ class Install extends Operation
     /** @var \GPM\Model\GitPackage $packageObject */
     protected $package;
 
-    public function execute(string $dir, string $packagesDir = null, string $packagesBaseUrl = null): void
+    public function execute(string $dir, ?string $packagesDir = null, ?string $packagesBaseUrl = null): void
     {
         try {
             $parsedConfig = Config::parseConfig($packagesDir . $dir);
